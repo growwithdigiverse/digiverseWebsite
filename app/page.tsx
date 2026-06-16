@@ -7,12 +7,12 @@ import {
 import FadeIn from "./components/fadeIn";
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white overflow-x-hidden">
+    <main className="min-h-screen bg-white w-full max-w-[100vw] overflow-x-hidden">
 
       {/* Navbar */}
-      <nav className="sticky top-0 z-50 flex justify-center px-4">
+      <nav className="sticky top-0 z-50 flex justify-center w-full px-3 sm:px-4 pt-3 sm:pt-4">
 
-        <div className="flex items-center gap-4 sm:gap-8 px-4 sm:px-6 md:px-12 py-2 rounded-full bg-white/50 backdrop-blur-md shadow-lg max-w-full overflow-x-auto">
+        <div className="flex items-center justify-between sm:justify-center gap-2 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-10 py-2 sm:py-3 rounded-full bg-white/70 backdrop-blur-md shadow-lg w-full sm:w-auto max-w-full">
 
           {/* Logo */}
           <Image
@@ -20,11 +20,11 @@ export default function Home() {
             alt="DigiVerse Logo"
             width={60}
             height={60}
-            className="w-10 h-10 sm:w-12 sm:h-12 md:w-[60px] md:h-[60px] flex-shrink-0"
+            className="w-9 h-9 sm:w-11 sm:h-11 md:w-[60px] md:h-[60px] flex-shrink-0"
           />
 
           {/* Navigation */}
-          <div className="flex gap-3 sm:gap-5 md:gap-8 text-gray-700 font-medium text-xs sm:text-sm md:text-base whitespace-nowrap">
+          <div className="flex gap-2.5 sm:gap-5 md:gap-8 text-gray-700 font-medium text-[11px] sm:text-sm md:text-base whitespace-nowrap">
 
             <a
               href="#home"
