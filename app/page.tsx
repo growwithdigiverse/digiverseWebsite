@@ -1,65 +1,552 @@
 import Image from "next/image";
-
+import {
+  Smartphone,
+  TrendingUp,
+  Monitor,
+} from "lucide-react";
+import FadeIn from "./components/fadeIn";
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-white">
+
+      {/* Navbar */}
+      <nav className="sticky top-0 z-50 flex justify-center">
+
+        <div className="flex items-center gap-200 px-50 py-0 rounded-full bg-white/50 backdrop-blur-md shadow-lg">
+
+          {/* Logo */}
+          <Image
+            src="/LogoWithBG.png"
+            alt="DigiVerse Logo"
+            width={60}
+            height={60}
+          />
+
+          {/* Navigation */}
+          <div className="flex gap-8 text-gray-700 font-medium">
+
+            <a
+              href="#home"
+              className="hover:text-[#4D6BB3] hover:scale-105 transition duration-300"      >
+              Home
+            </a>
+
+            <a
+              href="#services"
+              className="hover:text-[#4D6BB3] hover:scale-105 transition duration-300"
+            >
+              Services
+            </a>
+
+            <a
+              href="#about"
+              className="hover:text-[#4D6BB3] hover:scale-105 transition duration-300"
+            >
+              About
+            </a>
+
+            <a
+              href="#contact"
+              className="hover:text-[#4D6BB3] hover:scale-105 transition duration-300"
+            >
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+      </nav>
+
+      {/* CTA Section */}
+      <FadeIn>
+        <section id="home" className="max-w-6xl mx-auto px-6 py-12">
+
+          <div className="bg-gradient-to-r from-[#4BB5E8] via-[#4D6BB3] to-[#7A3F97] rounded-2xl p-8 text-white">
+
+            <div className="flex items-center justify-between">
+
+              <div>
+                <p className="text-sm font-semibold tracking-wide mb-1">
+                  READY TO GROW?
+                </p>
+
+                <h2 className="text-2xl font-bold">
+                  Let's Take Your Business To The Next Level
+                </h2>
+              </div>
+
+              <div className="flex gap-3">
+
+                <button className="bg-white text-[#4D6BB3] px-5 py-2 rounded-lg font-semibold hover:scale-105 transition">
+                  Download Details
+                </button>
+
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=growwithdigiverse@gmail.com&su=Inquiry%20from%20DigiVerse%20Website"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#8CC84B] text-white px-8 py-4 rounded-xl font-semibold hover:scale-105 transition inline-block"
+                >
+                  Email Us
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+      </FadeIn>
+      {/* Hero Section */}
+      <FadeIn>
+        <section className="max-w-6xl mx-auto px-6 pt-0 pb-24">
+
+          <p className="text-[#4D6BB3] font-semibold mb-4">
+          The Digital Marketing Agency - Bengaluru
+        </p>
+
+          <h1 className="text-6xl lg:text-7xl font-bold leading-tight mb-6">
+
+            <span className="bg-gradient-to-r from-[#4BB5E8] via-[#4D6BB3] to-[#7A3F97] bg-clip-text text-transparent">
+              We Drive Real Growth
+            </span>
+
+            <br />
+
+            For Your Business
+
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="text-gray-600 text-xl max-w-2xl mb-8">
+            Growth is a journey, not a destination. At DigiVerse, 
+            we partner with businesses to navigate the ever-evolving 
+            digital landscape, combining creativity, data, and continuous 
+            learning to create measurable growth.
           </p>
+
+          <div className="flex gap-4">
+
+            <button className="bg-[#4D6BB3] hover:bg-[#7A3F97] text-white px-8 py-4 rounded-xl transition">
+              Know More About Us
+            </button>
+
+            <button className="border-2 border-[#4D6BB3] px-8 py-4 rounded-xl hover:bg-[#F2FAFE] transition">
+              Industries We Serve
+            </button>
+
+          </div>
+
+        </section>
+      </FadeIn>
+      {/* Stats
+      <FadeIn>
+        <section className="max-w-6xl mx-auto px-6 py-16">
+
+          <div className="grid grid-cols-4 gap-8 text-center">
+
+            <div>
+              <h2 className="text-4xl font-bold text-[#4BB5E8]">
+                50+
+              </h2>
+              <p className="text-gray-600">
+                Successful Campaigns
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-4xl font-bold text-[#7A3F97]">
+                10+
+              </h2>
+              <p className="text-gray-600">
+                Happy Clients
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-4xl font-bold text-[#8CC84B]">
+                3+
+              </h2>
+              <p className="text-gray-600">
+                Years Experience
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-4xl font-bold text-[#4D6BB3]">
+                100%
+              </h2>
+              <p className="text-gray-600">
+                Client Satisfaction
+              </p>
+            </div>
+
+          </div>
+
+        </section>
+      </FadeIn> */}
+      {/* Services section */}
+      <FadeIn>
+        <section
+          id="services"
+          className="max-w-6xl mx-auto px-6 py-24 bg-[#FAFBFD]"
+        >
+
+          <p className="text-center text-[#4D6BB3] font-semibold mb-2">
+            OUR SERVICES
+          </p>
+
+          <h2 className="text-5xl font-bold text-center mb-12">
+            Solutions That Drive Growth
+          </h2>
+
+          <div className="grid grid-cols-3 gap-10">
+
+            <div className="border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-[#4BB5E8] transition duration-300">
+
+              <div className="w-16 h-16 rounded-2xl bg-[#F2FAFE] flex items-center justify-center mb-6">
+                <Smartphone
+                  size={32}
+                  className="text-[#4BB5E8]"
+                />
+              </div>
+
+              <h3 className="text-2xl font-semibold mb-4">
+                Social Media Management
+              </h3>
+
+              <p className="text-gray-600">
+                Build your brand, engage your audience,
+                and grow your presence across all major
+                platforms.
+              </p>
+              {/* <div className="mt-6 text-[#4D6BB3] font-semibold">
+                Learn More →
+              </div> */}
+            </div>
+
+            <div className="border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-[#7A3F97] transition duration-300">
+
+              <div className="w-16 h-16 rounded-2xl bg-[#F7F1FB] flex items-center justify-center mb-6">
+                <TrendingUp
+                  size={32}
+                  className="text-[#7A3F97]"
+                />
+              </div>
+
+              <h3 className="text-2xl font-semibold mb-4">
+                Performance Marketing
+              </h3>
+
+              <p className="text-gray-600">
+                Targeted campaigns that bring high-quality
+                leads and maximize your return on investment.
+              </p>
+              {/* <div className="mt-6 text-[#4D6BB3] font-semibold">
+                Learn More →
+              </div> */}
+            </div>
+
+            <div className="border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-[#8CC84B] transition duration-300">
+
+              <div className="w-16 h-16 rounded-2xl bg-[#F6FCEB] flex items-center justify-center mb-6">
+                <Monitor
+                  size={32}
+                  className="text-[#8CC84B]"
+                />
+              </div>
+
+              <h3 className="text-2xl font-semibold mb-4">
+                Website Development
+              </h3>
+
+              <p className="text-gray-600">
+                Modern, responsive websites designed to
+                convert visitors into customers.
+              </p>
+              {/* <div className="mt-6 text-[#4D6BB3] font-semibold">
+                Learn More →
+              </div> */}
+            </div>
+
+          </div>
+
+        </section>
+      </FadeIn>
+      {/* Why DigiVerse */}
+      <FadeIn>
+        <section id="about" className="max-w-6xl mx-auto px-6 py-24">
+
+          <p className="text-center text-[#4D6BB3] font-semibold mb-2">
+            WHY DIGIVERSE
+          </p>
+
+          <h2 className="text-5xl font-bold text-center mb-12">
+            Why Businesses Choose Us
+          </h2>
+
+          <div className="grid grid-cols-3 gap-10">
+
+            <div className="bg-[#F2FAFE] rounded-2xl p-8">
+
+              <h3 className="text-2xl font-semibold mb-4">
+                Data-Driven Strategy
+              </h3>
+
+              <p className="text-gray-600">
+                Every decision is backed by analytics and measurable insights.
+              </p>
+
+            </div>
+
+            <div className="bg-[#F7F1FB] rounded-2xl p-8">
+
+              <h3 className="text-2xl font-semibold mb-4">
+                Transparent Reporting
+              </h3>
+
+              <p className="text-gray-600">
+                Clear updates and performance reports without the jargon.
+              </p>
+
+            </div>
+
+            <div className="bg-[#F6FCEB] rounded-2xl p-8">
+
+              <h3 className="text-2xl font-semibold mb-4">
+                Growth Focused
+              </h3>
+
+              <p className="text-gray-600">
+                Our goal is simple: help your business grow sustainably.
+              </p>
+
+            </div>
+
+          </div>
+
+        </section>
+      </FadeIn>
+      {/* process section */}
+      <FadeIn>
+        <section className="max-w-6xl mx-auto px-6 py-24 bg-white">
+
+          <p className="text-center text-[#4D6BB3] font-semibold mb-2">
+            OUR PROCESS
+          </p>
+
+          <h2 className="text-5xl font-bold text-center mb-16">
+            How We Help Your Business Grow
+          </h2>
+
+          <div className="grid grid-cols-4 gap-8">
+
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-full bg-[#F2FAFE] flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-[#4BB5E8]">
+                1
+              </div>
+
+              <h3 className="font-semibold text-xl mb-2">
+                Discovery
+              </h3>
+
+              <p className="text-gray-600">
+                Understanding your business, goals and audience.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-full bg-[#F7F1FB] flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-[#7A3F97]">
+                2
+              </div>
+
+              <h3 className="font-semibold text-xl mb-2">
+                Strategy
+              </h3>
+
+              <p className="text-gray-600">
+                Creating a customized growth roadmap.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-full bg-[#F6FCEB] flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-[#8CC84B]">
+                3
+              </div>
+
+              <h3 className="font-semibold text-xl mb-2">
+                Execution
+              </h3>
+
+              <p className="text-gray-600">
+                Launching campaigns and implementing solutions.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-full bg-[#F2FAFE] flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-[#4D6BB3]">
+                4
+              </div>
+
+              <h3 className="font-semibold text-xl mb-2">
+                Growth
+              </h3>
+
+              <p className="text-gray-600">
+                Tracking performance and scaling results.
+              </p>
+            </div>
+
+          </div>
+
+        </section>
+      </FadeIn>
+      {/* clients results section */}
+      <FadeIn>
+        <section className="max-w-6xl mx-auto px-6 py-24 bg-[#FAFBFD]">
+
+          <p className="text-center text-[#4D6BB3] font-semibold mb-2">
+            RESULTS
+          </p>
+
+          <h2 className="text-5xl font-bold text-center mb-12">
+            <div className="w-24 h-1 mx-auto rounded-full bg-gradient-to-r from-[#4BB5E8] via-[#7A3F97] to-[#8CC84B] mb-10"></div>
+            Growth That Speaks For Itself
+          </h2>
+
+          <div className="grid grid-cols-3 gap-10">
+
+            <div className="rounded-2xl border p-8 text-center hover:shadow-xl transition">
+
+              <h3 className="text-5xl font-bold text-[#4BB5E8] mb-4">
+                +245%
+              </h3>
+
+              <p className="font-semibold mb-2">
+                Increased Reach
+              </p>
+
+              <p className="text-gray-600">
+                Through strategic content planning and audience targeting.
+              </p>
+
+            </div>
+
+            <div className="rounded-2xl border p-8 text-center hover:shadow-xl transition">
+
+              <h3 className="text-5xl font-bold text-[#7A3F97] mb-4">
+                3X
+              </h3>
+
+              <p className="font-semibold mb-2">
+                Lead Generation
+              </p>
+
+              <p className="text-gray-600">
+                Optimized campaigns that brought qualified prospects.
+              </p>
+
+            </div>
+
+            <div className="rounded-2xl border p-8 text-center hover:shadow-xl transition">
+
+              <h3 className="text-5xl font-bold text-[#8CC84B] mb-4">
+                90%
+              </h3>
+
+              <p className="font-semibold mb-2">
+                Client Retention
+              </p>
+
+              <p className="text-gray-600">
+                Building long-term relationships through measurable results.
+              </p>
+
+            </div>
+
+          </div>
+
+        </section>
+      </FadeIn>
+      {/* CTA Section */}
+      <FadeIn>
+        <section id="contact" className="max-w-6xl mx-auto px-6 py-24">
+
+          <div className="bg-gradient-to-r from-[#4BB5E8] via-[#4D6BB3] to-[#7A3F97] rounded-3xl p-16 text-center text-white">
+
+            <p className="font-semibold mb-4 tracking-wide">
+              READY TO GROW?
+            </p>
+
+            <h2 className="text-5xl font-bold mb-6">
+              Let's Take Your Business To The Next Level
+            </h2>
+
+            <p className="text-lg mb-10 max-w-2xl mx-auto">
+              Whether you're looking for more leads, stronger branding,
+              or a high-converting website, DigiVerse is here to help.
+            </p>
+
+            <div className="flex justify-center gap-4">
+
+              <button className="bg-white text-[#4D6BB3] px-8 py-4 rounded-xl font-semibold hover:scale-105 transition">
+                Download Details
+              </button>
+
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=growwithdigiverse@gmail.com&su=Inquiry%20from%20DigiVerse%20Website"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#8CC84B] text-white px-8 py-4 rounded-xl font-semibold hover:scale-105 transition inline-block"
+              >
+                Email Us
+              </a>
+
+            </div>
+
+          </div>
+
+        </section>
+      </FadeIn>
+
+      <footer className="border-t mt-24">
+
+        <div className="max-w-6xl mx-auto px-6 py-12">
+
+          <div className="flex justify-between items-center">
+
+            <div>
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-[#4BB5E8] via-[#4D6BB3] via-[#7A3F97] to-[#8CC84B] bg-clip-text text-transparent">
+                DigiVerse
+              </h3>
+
+              <p className="text-gray-500 mt-2">
+                We All Grow Digitally
+              </p>
+            </div>
+
+            <div className="text-right text-gray-500">
+              <p>Email: hello@digiverse.com</p>
+              <p>© 2026 DigiVerse. All rights reserved.</p>
+            </div>
+
+          </div>
+
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+      </footer>
+      {/* <div className="fixed bottom-6 right-6 z-50 group flex items-center">
+
+        <a
+          href="https://wa.me/91YOURNUMBER"
+          target="_blank"
+          className="bg-[#8CC84B] text-white p-4 rounded-full shadow-xl hover:scale-110 transition"
+        >
+          💬
+        </a>
+
+      </div> */}
+    </main>
   );
 }
