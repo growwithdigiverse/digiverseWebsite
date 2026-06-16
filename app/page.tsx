@@ -16,7 +16,7 @@ export default function Home() {
 
           {/* Logo */}
           <Image
-            src="/LogoWithBG.png"
+            src="/LogoWithBG.PNG"
             alt="DigiVerse Logo"
             width={60}
             height={60}
